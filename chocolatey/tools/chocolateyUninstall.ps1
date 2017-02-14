@@ -7,7 +7,7 @@
     if(Test-Path $PROFILE) {
         $oldProfile = @(Get-Content $PROFILE)
 
-        . $currentVersionPath\src\Utils.ps1
+        . $currentVersionPath\posh-git\Utils.ps1
         $oldProfileEncoding = Get-FileEncoding $PROFILE
 
         $newProfile = @()
@@ -18,7 +18,7 @@
             if($line -like '. *posh-git*profile.example.ps1*') {
                 continue;
             }
-            if($line -like 'Import-Module *\src\posh-git.psd1*') {
+            if($line -like 'Import-Module *\posh-git\posh-git.psd1*') {
                 continue;
             }
             $newProfile += $line
