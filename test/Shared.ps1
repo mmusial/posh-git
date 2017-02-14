@@ -1,4 +1,4 @@
-$modulePath = Convert-Path $PSScriptRoot\..\src
+$modulePath = Convert-Path $PSScriptRoot\..\posh-git
 $moduleManifestPath = "$modulePath\posh-git.psd1"
 
 # We need this or the Git mocks don't work
